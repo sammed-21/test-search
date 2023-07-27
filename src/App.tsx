@@ -1,7 +1,7 @@
 import React from 'react';
  
 import './App.scss';
-import Logo from "./logo.png"
+import Logo from "./assets/logo.png"
 import SearchBar from './SearchBar';
  
 function App() {

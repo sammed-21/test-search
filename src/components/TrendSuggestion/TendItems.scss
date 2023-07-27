@@ -2,10 +2,13 @@
 
  
 
-.fashion_image{
-    border-radius: 5px;
-}
- .cards{
+.cards{
     list-style: none;
     text-decoration: none;
+    p{
+        color:$secondary-color;
+    }
+    .fashion_image{
+        border-radius: 5px;
+    }
  }

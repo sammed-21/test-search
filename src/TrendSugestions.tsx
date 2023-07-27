@@ -29,7 +29,9 @@ const TrendSuggestions: React.FC = () => {
 
   return (
     <div className="main">
-      <h2>Clothing Suggestions</h2>
+      <div>
+
+      <h2>Latest Trends</h2>
       <div className="container">
         
         {clothingItems.map((item) => {
@@ -39,7 +41,22 @@ const TrendSuggestions: React.FC = () => {
             </div>
           );
         })}
-        </div>
+      </div>
+      
+      </div>
+      <div className="second-container">
+        <h2>Popular Suggestions</h2>
+
+        {
+          clothingItems.map((items) => {
+            return (
+              <div key={items.id}>
+                <p>{items.name}</p>
+              </div>
+            )
+          })
+        }
+      </div>
        
     </div>
   );

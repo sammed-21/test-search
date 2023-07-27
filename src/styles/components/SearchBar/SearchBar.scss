@@ -1,4 +1,4 @@
- /* search-bar.scss */
+/* search-bar.scss */
 
 /* Variables */
 $search-bar-background: #f0f0f0;
@@ -7,18 +7,37 @@ $search-bar-padding: 10px;
 $search-icon-color: #666;
 
 /* Search bar container */
-.inputtag{
-    min-width: 35vw;
-    height: 45px;
-    border: none;
-    border-radius:10px;
-    
 
-}
-.search-bar{
-    padding-top: 24vh;
+.search-bar {
+  padding-top: 13vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .search {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-bottom: 10px;
+
+    background-color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    .inputtag {
+      min-width: 50vw;
+      border: none;
+      outline: none;
+    }
+    img {
+      position: absolute;
+      /* Adjust the position of the icon as needed */
+      width: 20px;
+      height: 20px;
+      right: 10px;
+    }
+  }
+  .second-container{
+    margin-top:15px;
+  }
 }
