@@ -1,0 +1,24 @@
+ /* search-bar.scss */
+
+/* Variables */
+$search-bar-background: #f0f0f0;
+$search-bar-border: 1px solid #ccc;
+$search-bar-padding: 10px;
+$search-icon-color: #666;
+
+/* Search bar container */
+.inputtag{
+    min-width: 35vw;
+    height: 45px;
+    border: none;
+    border-radius:10px;
+    
+
+}
+.search-bar{
+    padding-top: 24vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,17 @@
+/* search-bar.scss */
+/* Variables */
+/* Search bar container */
+.inputtag {
+  min-width: 35vw;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+}
+
+.search-bar {
+  padding-top: 24vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=SearchBar.css.map */

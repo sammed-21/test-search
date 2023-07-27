@@ -1,11 +1,18 @@
 import React from 'react';
  
-import './App.css';
-
+import './App.scss';
+import Logo from "./logo.png"
+import SearchBar from './SearchBar';
+ 
 function App() {
   return (
     <div className="App">
-      <h1>he this is test </h1>
+      <div className="search-bar-container">
+ 
+         <SearchBar/>
+        
+      </div>
+      <img src={Logo} className="logo"/>
     </div>
   );
 }
