@@ -41,23 +41,34 @@
 .main .container {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  gap: 20px;
+  min-width: 100%;
+  gap: 10px;
 }
 .main .container .sidebar {
   flex: 1;
-  width: 30%;
+  max-width: 25%;
   max-height: 90vh;
-  background-color: rgb(252, 246, 246);
+  background-color: rgb(255, 255, 255);
 }
 .main .container .container-main {
   flex: 3;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  max-height: 400px; /* Set a max height to trigger the scroll */
+  gap: 15px;
+  max-height: 450px; /* Set a max height to trigger the scroll */
   overflow-y: auto;
-  width: 70%;
+  max-width: 80%;
   min-height: 90vh;
   background-color: rgb(252, 246, 246);
+}
+@media (max-width: 768px) {
+  .main {
+    /* Reduce the width when the screen width is less than or equal to 768px */
+  }
+  .main .container-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=FilterResult.css.map */

@@ -15,20 +15,21 @@ const Brand = () => {
     <div className="dropdown-content">
      
        
-        <ul>
-          <li>
-            <input type="checkbox" id="brand1" />
-            <label htmlFor="brand1">Brand 1</label>
-          </li>
-          <li>
-            <input type="checkbox" id="brand2" />
-            <label htmlFor="brand2">Brand 2</label>
-          </li>
+    <ul>
+      <li>
+        <input type="checkbox" id="Price1" />
 
-        </ul>
-   
+        <label htmlFor="Price1">H&M</label>
+      </li>
+      <li>
+        <input type="checkbox" id="Price2" />
+        <label htmlFor="Price2">Mango</label>
+      </li>
 
-    </div>
+    </ul>
+
+
+</div>
 }
   </div>
   )

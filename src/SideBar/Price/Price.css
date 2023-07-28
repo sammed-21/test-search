@@ -1,14 +1,17 @@
-.Price {
+.price {
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   gap: 10px;
+  font-size: 16px;
 }
-.Price .Price-container {
+.price .price-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.Price .Price-container .sub-category {
-  padding: 10px 0;
+.price .dropdown-content ul li {
+  display: flex;
+  padding: 5px 0;
 }/*# sourceMappingURL=Price.css.map */

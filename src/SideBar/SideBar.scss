@@ -2,15 +2,18 @@
 
 .container-sidebar{
     display: flex;
-    
+    min-width:200px;
+align-items: start;
     flex-direction:column;
     justify-content: flex-start;
     font-family: $font-family;
     
     .container-main{
+        display: flex;
         flex-direction:column;
+        width:100% ;
         justify-content:flex-start;
-        padding:20px 0;
+        
 
     }
 }

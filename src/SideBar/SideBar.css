@@ -2,12 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 .container-sidebar {
   display: flex;
+  min-width: 200px;
+  align-items: start;
   flex-direction: column;
   justify-content: flex-start;
   font-family: "Inter", sans-serif;
 }
 .container-sidebar .container-main {
+  display: flex;
   flex-direction: column;
+  width: 100%;
   justify-content: flex-start;
-  padding: 20px 0;
 }/*# sourceMappingURL=SideBar.css.map */

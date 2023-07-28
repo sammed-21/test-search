@@ -1,6 +1,7 @@
 .brand{
     display: flex;
-    flex-direction: column;
+     justify-content:flex-start;
+     flex-direction: column;
     gap: 10px;
     
     .brand-container{
@@ -9,9 +10,12 @@
 
         align-items: center;
         justify-content: space-between;
-        .sub-category{
-            padding: 10px 0;
-        }
     }
+    .dropdown-content ul li{
+        display: flex;
+        padding: 5px 0;
+    }
+    
+    
 }
 

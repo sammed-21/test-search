@@ -2,7 +2,7 @@ import React from 'react'
 import "./SideBar.scss"
 import Brand from './Brand/Brand'
 import Price from './Price/Price'
-import Rating from './Rating/Rating'
+import Ratings from './Rating/Ratings'
 const SideBar = () => {
   return (
       <div className="container-sidebar">
@@ -12,7 +12,7 @@ const SideBar = () => {
           <div className="container-main">
               <Brand />
               <Price />
-              <Rating/>
+              <Ratings/>
           </div>
     </div>
   )
