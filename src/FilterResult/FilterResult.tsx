@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import Search from "../assets/Group.png";
 import "./FilterResult.scss"; // Import the SCSS file
 import Card from "../components/Card/Card";
@@ -18,6 +18,7 @@ interface ClothingItem {
   image: string;
 }
 const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
+  const [selectItems, setSelectItems] = useState<string>("");
   const [searchInput, setSearchInput] = useState<string>("");
   const [clothingItems, setClothingItems] = useState<ClothingItem[]>(
     generateData(10)
@@ -31,16 +32,31 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
   )
     );
     setClothingItems(filteredItems);
-  }, [searchInput]);
+  }, [selectItems]);
 
+  const handlePriceFilter = (priceRange: string) => {
+    let filteredItems: ClothingItem[] = [];
 
-  const handleInputSearch = (e: any) => {
+    if (priceRange === "under500") {
+      filteredItems = clothingItems.filter(item => parseFloat(item.price) < 500);
+    } else if (priceRange === "500to3000") {
+      filteredItems = clothingItems.filter(item => parseFloat(item.price) >= 500 && parseFloat(item.price) <= 3000);
+    }
+
+    setClothingItems(filteredItems);
+  };
+  const handleInputSearch = ( e:any ) => {
     setSearchInput(e.target.value);
     // setSearchInput("")
   };
+  //radio filter 
+  const handleChange = (value: string) => {
+    setSelectItems(value);
+    console.log(value);
+  };
 
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = generateData(10);
     setClothingItems(data);
@@ -65,7 +81,7 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
       {/* </div> */}
       <div className="container">
         <div className="sidebar">
-          <SideBar />
+        <SideBar handleChange={handleChange} handlePriceFilter={handlePriceFilter}  />
         </div>
         <div className="container-main">
           {/* <h1>{searchQuery}</h1> */}

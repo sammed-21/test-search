@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import "./Ratings.scss"
 import drop from '../../assets/angle-right 1.png'
 import { Rating } from 'react-simple-star-rating'
-const Ratings = () => {
+interface SidebarProps{
+  handleChange: (value: string) => void;}
+const Ratings :React.FC<SidebarProps> = ({ handleChange }) => {
   const [dropDownMenu, setDropDownMenu] = useState(false);
   const [rating, setRating] = useState(1)
   return (<div className="ratings">
@@ -17,30 +19,30 @@ const Ratings = () => {
     <div className="dropdown-content">
      
        
-        <ul>
-          <li>
+         
+          <label>
             <input type="checkbox" id="Ratings1" />
 
             <Rating   initialValue={1} className='rate' readonly />
-          </li>
-          <li>
+          </label>
+          <label>
             <input type="checkbox" id="Ratings2" />
             <Rating   initialValue={2} className='rate' readonly/>
-          </li>
-          <li>
+          </label>
+          <label>
             <input type="checkbox" id="Ratings2" />
             <Rating   initialValue={3} className='rate' readonly/>
-          </li>
-          <li>
+          </label>
+          <label>
             <input type="checkbox" id="Ratings2" />
             <Rating   initialValue={4} className='rate' readonly/>
-          </li>
-          <li>
+          </label>
+          <label>
             <input type="checkbox" id="Ratings2" />
             <Rating   initialValue={5} className='rate' readonly/>
-          </li>
+          </label>
 
-        </ul>
+        
    
 
     </div>

@@ -1,29 +1,31 @@
 @import "../../styles/variables/variables";
 
- 
-
-.ratings{
-  display:flex;
-  justify-content:center;
-  flex-direction:column;
-  .ratings-container{
-    display:flex;
+.ratings {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .ratings-container {
+    display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
   }
-  .dropdown-content{
+  .dropdown-content {
     background-color: rgb(252, 252, 252);
-    ul{
-li{
-  
-  .rate svg {
-    /* Adjust the width as per your desired size */
-    width: 25px; /* For example, set the width to 15px */
-    height: auto; /* Keep the height auto to maintain the aspect ratio */
-    transform-origin: 0 0; /* Set the origin to the top-left corner */
-    transform: scale(0.8); /* Adjust the scale factor to change the star size */
-  }
-}
+  display: flex;
+  flex-direction: column;
+      label {
+        display: flex;
+        
+        .rate svg {
+          /* Adjust the width as per your desired size */
+          width: 25px; /* For example, set the width to 15px */
+          height: auto; /* Keep the height auto to maintain the aspect ratio */
+          transform-origin: 0 0; /* Set the origin to the top-left corner */
+          transform: scale(
+            0.8
+          ); /* Adjust the scale factor to change the star size */
+        }
+   
     }
   }
 }

@@ -5,11 +5,11 @@ import "./SearchBar.scss"; // Import the SCSS file
 import TrendSuggestions from "../TrendSuggestions/TrendSugestions";
 import Search from "../assets/Group.png";
 import FilterResult from "../FilterResult/FilterResult";
-interface SearchBarProps {
+interface SearchBarProp {
   onSearchSubmit: (query: string) => void;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearchSubmit }) => {
+const SearchBar: React.FC<SearchBarProp> = ({ onSearchSubmit }) => {
   const [showTrendSuggestions, setShowTrendSuggestions] = useState(false);
   const [showFilterResults, setShowFilterResults] = useState(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
