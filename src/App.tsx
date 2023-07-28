@@ -2,7 +2,7 @@ import React from 'react';
  
 import './App.scss';
 import Logo from "./assets/logo.png"
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/SearchBar';
  
 function App() {
   return (

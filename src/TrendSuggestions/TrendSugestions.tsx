@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./styles/components/TrendSugestions/TrendSugestions.scss";
+import "./TrendSugestions.scss";
 import { faker } from "@faker-js/faker";
  
-import TrendItems from "./components/TrendSuggestion/TrendItems";
+import ProductCard from "../components/ProductCard/ProductCard";
 
 interface ClothingItems{
   id: number;
@@ -37,7 +37,7 @@ const TrendSuggestions: React.FC = () => {
         {clothingItems.map((item) => {
           return (
             <div key={item.id}>
-              <TrendItems id={item.id} image={item.image} name={item.name} />
+              <ProductCard id={item.id} image={item.image} name={item.name} />
             </div>
           );
         })}

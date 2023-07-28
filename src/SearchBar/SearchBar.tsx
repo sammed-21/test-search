@@ -1,9 +1,9 @@
 // SearchBar.tsx
 
 import React, { useState } from "react";
-import "./styles/components/SearchBar/SearchBar.scss"; // Import the SCSS file
-import TrendSuggestions from "./TrendSugestions";
-import Search from "./assets/Group.png"
+import "./SearchBar.scss"; // Import the SCSS file
+import TrendSuggestions from "../TrendSuggestions/TrendSugestions";
+import Search from "../assets/Group.png"
 const SearchBar: React.FC = () => {
   const [showTrendSuggestions, setShowTrendSuggestions] = useState(false);
 

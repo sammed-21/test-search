@@ -1,5 +1,5 @@
 import React from 'react'
-import "./TendItems.scss"
+import "./ProductCard.scss"
 interface Items{
     id: number;
     image: string;
