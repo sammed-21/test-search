@@ -17,7 +17,7 @@ const Price: React.FC<SidebarProps> = ({ handlePriceFilter }) => {
         className="price-container"
         onClick={(prev) => setDropDownMenu(!dropDownMenu)}
       >
-        <h1 className="dropdown-btn">Price</h1>
+        <h2 className="dropdown-btn">Price</h2>
         <img src={drop} alt="" width={20} height={20} />
       </div>
       {dropDownMenu && (

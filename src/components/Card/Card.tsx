@@ -9,14 +9,13 @@ interface Props {
   price: string;
   largePrice: string;
   image: string;
+  clampedRating:number
 }
 
-const Card = ({ id, name, category, price, largePrice, image }: Props) => {
-  const [isClick, setClick] = useState(false); // Catch Rating value
-  const maxRating = 5;
-  const randomRating = Math.floor(Math.random() * (maxRating + 1));
-  const clampedRating = Math.max(1, Math.min(randomRating, maxRating));
-  return (
+const Card = ({ id, name, category, price, largePrice, image ,clampedRating}: Props) => {
+  const [isclick, setClick] = useState(false); // Catch Rating value
+ console.log(clampedRating)
+   return (
     <div className="frame">
       <div className={`overlap-group`}>
         <span>
@@ -32,7 +31,7 @@ const Card = ({ id, name, category, price, largePrice, image }: Props) => {
           </div>
         </span>
         <div className="heart">
-          <Heart isClick={isClick} onClick={() => setClick(!isClick)} />{" "}
+          <Heart isClick={isclick} onClick={() => setClick(!isclick)} />{" "}
         </div>
       </div>
       <div className="round-neck-cotton">

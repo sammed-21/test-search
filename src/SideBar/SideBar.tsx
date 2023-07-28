@@ -6,9 +6,15 @@ import Ratings from "./Rating/Ratings";
 interface SidebarProps {
   handleChange: (value: string) => void;
   
-  handlePriceFilter:(value:string) => void;
+  handlePriceFilter: (value: string) => void;
+  handelRatingfunc: (value: number) => void;
+
 }
-const sideBar: React.FC<SidebarProps> = ({ handleChange,handlePriceFilter }) => {
+const sideBar: React.FC<SidebarProps> = ({ handleChange,handlePriceFilter,handelRatingfunc }) => {
+  
+
+   
+
   return (
     <div className="container-sidebar">
       <div className="header">
@@ -17,7 +23,7 @@ const sideBar: React.FC<SidebarProps> = ({ handleChange,handlePriceFilter }) => 
       <div className="container-main">
         <Brand handleChange={handleChange} />
         <Price handlePriceFilter={handlePriceFilter} />
-        <Ratings handleChange={handleChange} />
+        <Ratings handelRatingfunc={handelRatingfunc} />
       </div>
     </div>
   );

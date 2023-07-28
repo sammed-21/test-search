@@ -2,46 +2,66 @@ import React, { ChangeEvent, useState } from 'react'
 import "./Ratings.scss"
 import drop from '../../assets/angle-right 1.png'
 import { Rating } from 'react-simple-star-rating'
-interface SidebarProps{
-  handleChange: (value: string) => void;}
-const Ratings :React.FC<SidebarProps> = ({ handleChange }) => {
+interface SidebarProps {
+  handelRatingfunc: (value: number) => void;
+}
+const Ratings :React.FC<SidebarProps> = ({ handelRatingfunc }) => {
   const [dropDownMenu, setDropDownMenu] = useState(false);
-  const [rating, setRating] = useState(1)
+  // const [rating, setRating] = useState(1)
+
+  const handleCheckboxChange = (value:number) => {
+    // setRating(value)
+    handelRatingfunc(value);
+    // console.log(value)
+  };
   return (<div className="ratings">
 
  
     <div className="ratings-container" onClick={prev => setDropDownMenu(!dropDownMenu)}>
 
-      <h1 className="dropdown-btn">Ratings</h1>
+      <h2 className="dropdown-btn">Ratings</h2>
       <img src={drop} alt="" width={20} height={20}/>
     </div>
     {dropDownMenu && 
     <div className="dropdown-content">
      
        
-         
+        <div onClick={()=>handleCheckboxChange(1)}>
           <label>
             <input type="checkbox" id="Ratings1" />
 
-            <Rating   initialValue={1} className='rate' readonly />
+            <Rating  initialValue={1} className='rate' readonly />
           </label>
+          </div>
+        <div onClick={()=>handleCheckboxChange(2)}>
           <label>
-            <input type="checkbox" id="Ratings2" />
-            <Rating   initialValue={2} className='rate' readonly/>
-          </label>
-          <label>
-            <input type="checkbox" id="Ratings2" />
-            <Rating   initialValue={3} className='rate' readonly/>
-          </label>
-          <label>
-            <input type="checkbox" id="Ratings2" />
-            <Rating   initialValue={4} className='rate' readonly/>
-          </label>
-          <label>
-            <input type="checkbox" id="Ratings2" />
-            <Rating   initialValue={5} className='rate' readonly/>
-          </label>
+            <input type="checkbox" id="Ratings1" />
 
+            <Rating  initialValue={2} className='rate' readonly />
+          </label>
+          </div>
+        <div onClick={()=>handleCheckboxChange(3)}>
+          <label>
+            <input type="checkbox" id="Ratings1" />
+
+            <Rating  initialValue={3} className='rate' readonly />
+          </label>
+          </div>
+        <div onClick={()=>handleCheckboxChange(4)}>
+          <label>
+            <input type="checkbox" id="Ratings1" />
+
+            <Rating  initialValue={4} className='rate' readonly />
+          </label>
+          </div>
+        <div onClick={()=>handleCheckboxChange(5)}>
+          <label>
+            <input type="checkbox" id="Ratings1" />
+
+            <Rating  initialValue={5} className='rate' readonly />
+          </label>
+          </div>
+          
         
    
 

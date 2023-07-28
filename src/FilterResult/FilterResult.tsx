@@ -16,6 +16,7 @@ interface ClothingItem {
   price: string;
   largePrice: string;
   image: string;
+  clampedRating: number;
 }
 const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
   const [selectItems, setSelectItems] = useState<string>("");
@@ -24,6 +25,8 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
     generateData(10)
   );
 
+
+  // this is search filter
   useEffect(() => {
     // Filter the clothing items based on the searchInput
     const filteredItems = clothingItems.filter((item) =>
@@ -34,6 +37,8 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
     setClothingItems(filteredItems);
   }, [selectItems]);
 
+
+  // price filter function
   const handlePriceFilter = (priceRange: string) => {
     let filteredItems: ClothingItem[] = [];
 
@@ -45,23 +50,37 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
 
     setClothingItems(filteredItems);
   };
+
+  //Filter through review rating
+  const handelRatingfunc = (rating: number) => {
+    console.log(rating)
+    let filteredItems: ClothingItem[] = [];
+    filteredItems = clothingItems.filter(item => item.clampedRating >= rating);
+    setClothingItems(filteredItems);
+  }
+
+  //set the searchinput
   const handleInputSearch = ( e:any ) => {
     setSearchInput(e.target.value);
     // setSearchInput("")
   };
+
+
   //radio filter 
   const handleChange = (value: string) => {
     setSelectItems(value);
     console.log(value);
   };
 
-
+//search bar form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = generateData(10);
     setClothingItems(data);
     setSearchInput("");
   };
+
+  
   return (
     <div className="main">
       <form onSubmit={handleSubmit}>
@@ -81,7 +100,7 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
       {/* </div> */}
       <div className="container">
         <div className="sidebar">
-        <SideBar handleChange={handleChange} handlePriceFilter={handlePriceFilter}  />
+        <SideBar handleChange={handleChange} handlePriceFilter={handlePriceFilter} handelRatingfunc={handelRatingfunc} />
         </div>
         <div className="container-main">
           {/* <h1>{searchQuery}</h1> */}
@@ -94,7 +113,7 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
               largePrice={item.largePrice}
               image={item.image}
               category={item.category}
-            />
+              clampedRating={item.clampedRating} />
           ))}
         </div>
       </div>

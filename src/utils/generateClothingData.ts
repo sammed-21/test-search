@@ -9,7 +9,7 @@ export interface ClothingItem {
 price: string;
 largePrice: string; 
 image: string;
-  
+clampedRating:number
   }
   
   // Function to generate fake clothing items
@@ -21,7 +21,8 @@ export const generateData = (count: number) => {
       category: faker.commerce.department(),
       price: faker.commerce.price(),
       image: faker.image.urlLoremFlickr({ category: "cloth" }),
-      largePrice: `Rs. ${basePrice + 100}`
+      largePrice: `Rs. ${basePrice + 100}`,
+      clampedRating : Math.floor(Math.random() * 6)
     }));
     return data;
 }
