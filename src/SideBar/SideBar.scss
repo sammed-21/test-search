@@ -7,13 +7,21 @@ align-items: start;
     flex-direction:column;
     justify-content: flex-start;
     font-family: $font-family;
-    
+    background-color: #fff;
     .container-main{
         display: flex;
         flex-direction:column;
         width:100% ;
         justify-content:flex-start;
         
+        
 
     }
+    @media (max-width: 768px) {
+        /* Reduce the width when the screen width is less than or equal to 768px */
+       display: flex;
+       flex-direction:column;
+       justify-content: flex-start;
+       align-items: center;
+      }
 }

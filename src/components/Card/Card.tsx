@@ -14,8 +14,7 @@ interface Props {
 
 const Card = ({ id, name, category, price, largePrice, image ,clampedRating}: Props) => {
   const [isclick, setClick] = useState(false); // Catch Rating value
- console.log(clampedRating)
-   return (
+    return (
     <div className="frame">
       <div className={`overlap-group`}>
         <span>

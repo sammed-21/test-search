@@ -53,8 +53,7 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
 
   //Filter through review rating
   const handelRatingfunc = (rating: number) => {
-    console.log(rating)
-    let filteredItems: ClothingItem[] = [];
+     let filteredItems: ClothingItem[] = [];
     filteredItems = clothingItems.filter(item => item.clampedRating >= rating);
     setClothingItems(filteredItems);
   }
@@ -62,20 +61,18 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
   //set the searchinput
   const handleInputSearch = ( e:any ) => {
     setSearchInput(e.target.value);
-    // setSearchInput("")
-  };
+   };
 
 
   //radio filter 
   const handleChange = (value: string) => {
     setSelectItems(value);
-    console.log(value);
-  };
+   };
 
 //search bar form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = generateData(10);
+    const data = generateData(16);
     setClothingItems(data);
     setSearchInput("");
   };

@@ -31,7 +31,7 @@ const Price: React.FC<SidebarProps> = ({ handlePriceFilter }) => {
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="Price1">
-                <h3>under 500</h3>
+                <p>under 500</p>
               </label>
             </li>
             <li>
@@ -42,7 +42,7 @@ const Price: React.FC<SidebarProps> = ({ handlePriceFilter }) => {
                 onChange={handleCheckboxChange}
               />
               <label htmlFor="Price2">
-                <h3>500 to 3000</h3>
+                <p>500 to 3000</p>
               </label>
             </li>
           </ul>

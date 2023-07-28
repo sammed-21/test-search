@@ -30,4 +30,9 @@
         top: 20px;
         right: 40px;
     }
+    @media (max-width:560px){
+        .logo{
+            right: 10px;
+            top: 10px;        }
+    }
 }

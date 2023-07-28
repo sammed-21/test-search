@@ -11,29 +11,23 @@ interface SearchBarProp {
 
 const SearchBar: React.FC<SearchBarProp> = ({ onSearchSubmit }) => {
   const [showTrendSuggestions, setShowTrendSuggestions] = useState(false);
-  const [showFilterResults, setShowFilterResults] = useState(false);
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  // const [searchQuery ,setSearchQuery]=useState<string>('');
-  const handleInputFocus = () => {
+   const [searchQuery, setSearchQuery] = useState<string>('');
+   const handleInputFocus = () => {
     setShowTrendSuggestions(true);
   };
   const handleInputSearch = (e: any) => {
     setSearchQuery(e.target.value);
-    console.log(searchQuery);
-  };
+   };
   const handleInputBlur = () => {
     setShowTrendSuggestions(false);
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent form submission
 
-    // You can perform any action you need with the searchQuery value here
-    console.log(searchQuery);
-    // Reset the input field and hide the trend suggestions
-    console.log(searchQuery);
-    setShowTrendSuggestions(false);
-    setShowFilterResults(true);
-    onSearchSubmit(searchQuery);
+    // you can perform any action you need with the searchQuery value here
+     // reset the input field and hide the trend suggestions
+     setShowTrendSuggestions(false);
+     onSearchSubmit(searchQuery);
     setSearchQuery("");
   };
   return (
@@ -55,7 +49,7 @@ const SearchBar: React.FC<SearchBarProp> = ({ onSearchSubmit }) => {
         </div>
       </form>
       <div className="second-container">
-        {/* //  */}
+       
 
         {showTrendSuggestions && <TrendSuggestions />}
       </div>

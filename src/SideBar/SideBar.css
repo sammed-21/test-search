@@ -7,10 +7,20 @@
   flex-direction: column;
   justify-content: flex-start;
   font-family: "Inter", sans-serif;
+  background-color: #fff;
 }
 .container-sidebar .container-main {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  .container-sidebar {
+    /* Reduce the width when the screen width is less than or equal to 768px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }/*# sourceMappingURL=SideBar.css.map */

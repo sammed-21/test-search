@@ -11,9 +11,7 @@ interface SidebarProps {
 const Brand: React.FC<SidebarProps> = ({ handleChange }) => {
   const [dropDownMenu, setDropDownMenu] = useState(false);
 
-  // const handleCheckboxChange = (brandName: string) => {
-  //   handleChange(brandName);
-  // };
+  //send the star value to the filter components
   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
       const brandName = event.target.value;
@@ -23,7 +21,7 @@ const Brand: React.FC<SidebarProps> = ({ handleChange }) => {
   return (
     <div className="brand">
       <div className="brand-container" onClick={() => setDropDownMenu(!dropDownMenu)}>
-        <h1 className="dropdown-btn">Brand</h1>
+        <h2 className="dropdown-btn">Brand</h2>
         <img src={drop} alt="" width={20} height={20} />
       </div>
       {dropDownMenu && 

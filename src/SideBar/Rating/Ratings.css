@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 .ratings .dropdown-content {
-  background-color: rgb(252, 252, 252);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
 }

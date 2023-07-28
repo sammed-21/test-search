@@ -13,7 +13,12 @@ function App() {
     setSearchQuery(query);
     setIsSearchPerformed(true);
   };
+  const homePage = () => {
+    setIsSearchPerformed(false)
+  
+  }
   return (
+
     <div className="App">
        {/* <div className="App"> */}
       <div className="container">
@@ -26,7 +31,7 @@ function App() {
         {isSearchPerformed && <FilterResult searchQuery={searchQuery} />}
         </div>
       </div>
-      <img src={Logo} className="logo" />
+      <img src={Logo} onClick={()=>homePage()} className="logo" />
     </div>
   );
 }

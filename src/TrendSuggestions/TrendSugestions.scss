@@ -41,7 +41,12 @@ justify-content: center;
   @media (max-width: 768px) {
     /* Reduce the width when the screen width is less than or equal to 768px */
     min-width: 100px;
-    
+    margin: 10px 20px;
+    .second-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   
 }
