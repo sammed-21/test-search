@@ -11,6 +11,7 @@ $search-icon-color: #666;
 .search-bar {
   padding-top: 13vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;

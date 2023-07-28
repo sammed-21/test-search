@@ -6,11 +6,17 @@ import TrendSuggestions from "../TrendSuggestions/TrendSugestions";
 import Search from "../assets/Group.png"
 const SearchBar: React.FC = () => {
   const [showTrendSuggestions, setShowTrendSuggestions] = useState(false);
+const [searchQuery ,setSearchQuery]=useState('');
+  const handleInputFocus = () => { 
 
-  const handleInputFocus = () => {
     setShowTrendSuggestions(true);
   };
-
+  const handleInputSearch = (e: any) => {
+  
+    setSearchQuery(e.target.value);
+    console.log(searchQuery);
+    
+}
   const handleInputBlur = () => {
     setShowTrendSuggestions(false);
   };
@@ -23,6 +29,10 @@ const SearchBar: React.FC = () => {
           onBlur={handleInputBlur}
           placeholder="Search"
           className="inputtag"
+          onChange={(e) => {
+            handleInputSearch(e);
+              // Call the handleInputSearch function with the updated search query
+          }}
         />
         <img
           src={Search}
@@ -33,7 +43,9 @@ const SearchBar: React.FC = () => {
       </div>
       <div className="second-container">
 
-      {showTrendSuggestions && <TrendSuggestions />}
+        {/* {showTrendSuggestions && <TrendSuggestions />} */}
+        {showTrendSuggestions && <TrendSuggestions />}
+        
       </div>
     </div>
   );
