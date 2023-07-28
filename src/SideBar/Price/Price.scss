@@ -1,0 +1,17 @@
+.Price{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    .Price-container{
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+        .sub-category{
+            padding: 10px 0;
+        }
+    }
+}
+

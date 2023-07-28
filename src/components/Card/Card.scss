@@ -3,7 +3,7 @@
 .frame {
   padding: 10px 10px;
   border-radius: 4px;
-  min-height: 380px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -13,7 +13,7 @@
   gap: 10px;
 
   background-color: #ffffff;
-  max-width: 239px;
+  max-width: 249px;
 
   .overlap-group {
     background-size: 100% 100%;
@@ -26,37 +26,37 @@
     .fashion_image {
       object-fit: cover;
     }
-    
+
     .heart {
       position: absolute;
       top: 0;
       right: 0;
-      width: 70px;
+       
     }
     .view-product-button {
       position: absolute;
-     
+
       bottom: 0;
       left: 0;
       top: 1;
-      width: 100%; /* Full image width */
+      width: 100%;
       height: 40px;
       background-color: #6d83ffb5;
       display: flex;
       opacity: 0.8;
       align-items: center;
       justify-content: center;
-      visibility: hidden; /* Hide the button by default */
-      transition: visibility 0.3s ease-in-out;
+      visibility: hidden;
+      transition: visibility 0.2s ease-in;
 
-      span{
-        color: #FFF;
-text-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.25);
-font-family: $font-family;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+      span {
+        color: #fff;
+        text-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.25);
+        font-family: $font-family;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
       }
     }
   }
@@ -64,7 +64,7 @@ line-height: normal;
     margin-top: 20px;
     h3 {
       color: #000;
-      font-family:  $font-family;
+      font-family: $font-family;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -73,10 +73,11 @@ line-height: normal;
 
     .group {
       display: flex;
+      gap: 10px;
 
       .rs {
         color: rgba(0, 0, 0, 0.4);
-        font-family:  $font-family;
+        font-family: $font-family;
         font-size: 20px;
         font-style: normal;
         font-weight: 300;
@@ -85,7 +86,7 @@ line-height: normal;
       }
       .text-wrapper {
         color: #6d84ff;
-        font-family:  $font-family;
+        font-family: $font-family;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -94,13 +95,25 @@ line-height: normal;
     }
 
     .div {
-      max-width: max-content;
+      max-width: 235px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: row;
+      .group-2{
+        width: 200px;
+
+        .custom-rating {
+          svg {
+            /* Adjust the width as per your desired size */
+            width: 25px; /* For example, set the width to 15px */
+            height: auto; /* Keep the height auto to maintain the aspect ratio */
+            transform-origin: 0 0; /* Set the origin to the top-left corner */
+            transform: scale(0.8); /* Adjust the scale factor to change the star size */
+          }
+        }
+      }
     }
-    
   }
   &:hover .overlap-group .view-product-button {
     visibility: visible;

@@ -1,3 +1,5 @@
+/* src/index.css or src/index.scss */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 .main {
   width: 100%;
   min-height: 100vh;
@@ -38,16 +40,24 @@
 }
 .main .container {
   display: flex;
+  flex-direction: row;
   width: 100%;
   gap: 20px;
 }
 .main .container .sidebar {
   flex: 1;
-  min-height: 90vh;
-  background-color: rgb(105, 145, 145);
+  width: 30%;
+  max-height: 90vh;
+  background-color: rgb(252, 246, 246);
 }
 .main .container .container-main {
   flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: 400px; /* Set a max height to trigger the scroll */
+  overflow-y: auto;
+  width: 70%;
   min-height: 90vh;
   background-color: rgb(252, 246, 246);
 }/*# sourceMappingURL=FilterResult.css.map */

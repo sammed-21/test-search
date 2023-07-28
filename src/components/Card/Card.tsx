@@ -4,36 +4,29 @@ import image from "../../assets/home.jpg";
 import Heart from "react-animated-heart";
 import "./Card.scss"
 interface Props {
-  property1: "variant-2" | "default";
+   
   id: number;
-  overlapGroupClassName: any;
-
-  text: string;
-  text1: string;
-  text2: string;
-
-  img: string;
+  name: string;
+  category: string;
+price: string;
+largePrice: string; 
+image: string;
 }
-// {
-//   property1,
-//  id,
-//   overlapGroupClassName,
 
-//   text = "Round neck cotton Tee",
-//   text1 = "Rs. 599",
-//   text2 = "Rs.549",
+const Card = ({
+   
+  id,
+  name,
+  category,
+price,
+largePrice, 
+image
 
-//   img = "star-2-2.svg",
-
-// }: Props
-const Card = () => {
-  const [rating, setRating] = useState(0);
-  const [isClick, setClick] = useState(false); // Catch Rating value
-  const handleRating = (rate: number) => {
-    setRating(rate);
-
-    // other logic
-  };
+}: Props) => {
+   const [isClick, setClick] = useState(false); // Catch Rating value
+  const maxRating = 5;
+  const randomRating = Math.floor(Math.random() * (maxRating + 1));
+  const clampedRating = Math.max(0, Math.min(randomRating, maxRating));
   return (
     <div className="frame">
       <div className={`overlap-group`}>
@@ -54,15 +47,14 @@ const Card = () => {
           <Heart isClick={isClick} onClick={() => setClick(!isClick)} />{" "}
         </div>
       </div>
-      <div className="round-neck-cotton"><h3>The salsa bae</h3>
+      <div className="round-neck-cotton"><h3>{name}</h3>
       <div className="group">
-        <div className="rs">Rs. 345</div>
-        <div className="text-wrapper">Rs.549</div>
+          <div className="rs">{largePrice}</div>
+          <div className="text-wrapper">{price}</div>
       </div>
       <div className="div">
         <div className="group-2">
-          <Rating onClick={handleRating} initialValue={rating} />
-        </div>
+        <Rating initialValue={clampedRating} />        </div>
         <div className="element">(210)</div>
       </div>
       </div>

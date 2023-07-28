@@ -1,0 +1,17 @@
+.brand{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    .brand-container{
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+        .sub-category{
+            padding: 10px 0;
+        }
+    }
+}
+

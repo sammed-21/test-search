@@ -1,0 +1,14 @@
+.Price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Price .Price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.Price .Price-container .sub-category {
+  padding: 10px 0;
+}/*# sourceMappingURL=Price.css.map */
