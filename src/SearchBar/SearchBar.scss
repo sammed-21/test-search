@@ -11,11 +11,21 @@ $search-icon-color: #666;
 .search-bar {
   padding-top: 13vh;
   display: flex;
-  position: relative;
+  
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
+
+  // 
+  position: relative;
+  background: url(../assets/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width:auto;
+  min-height: 100vh;
+  // 
 
   .search {
     display: flex;
@@ -35,6 +45,7 @@ $search-icon-color: #666;
       /* Adjust the position of the icon as needed */
       width: 20px;
       height: 20px;
+      bottom:0;
       right: 10px;
     }
   }

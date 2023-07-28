@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { useState } from "react";
 
+
 export interface ClothingItem {
     id: number;
     name: string;

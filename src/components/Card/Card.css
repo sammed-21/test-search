@@ -1,0 +1,101 @@
+/* src/index.css or src/index.scss */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+.frame {
+  padding: 10px 10px;
+  border-radius: 4px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  justify-content: flex-end;
+  gap: 10px;
+  background-color: #ffffff;
+  max-width: 239px;
+}
+.frame .overlap-group {
+  background-size: 100% 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.frame .overlap-group .fashion_image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.frame .overlap-group .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+}
+.frame .overlap-group .view-product-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 1;
+  width: 100%; /* Full image width */
+  height: 40px;
+  background-color: rgba(109, 131, 255, 0.7098039216);
+  display: flex;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; /* Hide the button by default */
+  transition: visibility 0.3s ease-in-out;
+}
+.frame .overlap-group .view-product-button span {
+  color: #FFF;
+  text-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.25);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.frame .round-neck-cotton {
+  margin-top: 20px;
+}
+.frame .round-neck-cotton h3 {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.frame .round-neck-cotton .group {
+  display: flex;
+}
+.frame .round-neck-cotton .group .rs {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration: line-through;
+}
+.frame .round-neck-cotton .group .text-wrapper {
+  color: #6d84ff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.frame .round-neck-cotton .div {
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.frame:hover .overlap-group .view-product-button {
+  visibility: visible;
+}/*# sourceMappingURL=Card.css.map */

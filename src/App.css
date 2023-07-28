@@ -1,14 +1,16 @@
-.search-bar-container {
-  position: relative;
-  background: url(../public/home.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: auto;
+.App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   min-height: 100vh;
 }
-
-.logo {
+.App .container .hidden {
+  display: none;
+}
+.App .container .search {
+  visibility: visible;
+}
+.App .logo {
   position: absolute;
   top: 20px;
   right: 40px;

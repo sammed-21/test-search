@@ -22,7 +22,7 @@ function TrendSuggestions() {
     }, []);
 
   return (
-    <div className="main">
+    <div className="trendContainer">
       <div>
 
         <h2>Latest Trends</h2>

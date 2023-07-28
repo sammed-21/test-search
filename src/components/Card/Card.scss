@@ -1,0 +1,108 @@
+@import "../../styles/variables/variables";
+
+.frame {
+  padding: 10px 10px;
+  border-radius: 4px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  justify-content: flex-end;
+  gap: 10px;
+
+  background-color: #ffffff;
+  max-width: 239px;
+
+  .overlap-group {
+    background-size: 100% 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    .fashion_image {
+      object-fit: cover;
+    }
+    
+    .heart {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70px;
+    }
+    .view-product-button {
+      position: absolute;
+     
+      bottom: 0;
+      left: 0;
+      top: 1;
+      width: 100%; /* Full image width */
+      height: 40px;
+      background-color: #6d83ffb5;
+      display: flex;
+      opacity: 0.8;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden; /* Hide the button by default */
+      transition: visibility 0.3s ease-in-out;
+
+      span{
+        color: #FFF;
+text-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.25);
+font-family: $font-family;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+      }
+    }
+  }
+  .round-neck-cotton {
+    margin-top: 20px;
+    h3 {
+      color: #000;
+      font-family:  $font-family;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .group {
+      display: flex;
+
+      .rs {
+        color: rgba(0, 0, 0, 0.4);
+        font-family:  $font-family;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-decoration: line-through;
+      }
+      .text-wrapper {
+        color: #6d84ff;
+        font-family:  $font-family;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+
+    .div {
+      max-width: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+    
+  }
+  &:hover .overlap-group .view-product-button {
+    visibility: visible;
+  }
+}

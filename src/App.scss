@@ -1,14 +1,33 @@
-.search-bar-container{
-    position: relative;
-    background: url(../public/home.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width:auto;
+// .search-bar-container{
+//     position: relative;
+//     background: url(../public/home.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     width:auto;
+//     min-height: 100vh;
+// }
+
+
+.App{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     min-height: 100vh;
-}
-.logo{
-    position: absolute;
-    top: 20px;
-    right: 40px;
+    .container{
+       
+         
+        
+        .hidden{
+            display: none;
+        }
+        .search{
+            visibility: visible;
+        }
+    }
+    .logo{
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
 }

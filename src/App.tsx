@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
  
 import './App.scss';
 import Logo from "./assets/logo.png"
 import SearchBar from './SearchBar/SearchBar';
+import FilterResult from './FilterResult/FilterResult';
  
 function App() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchPerformed, setIsSearchPerformed] = useState(false);
+
+  const handleSearchSubmit = (query: string) => {
+    setSearchQuery(query);
+    setIsSearchPerformed(true);
+  };
   return (
     <div className="App">
-      <div className="search-bar-container">
- 
-         <SearchBar/>
-        
+       {/* <div className="App"> */}
+      <div className="container">
+        <div className={isSearchPerformed ? 'hidden' : 'search'}>
+
+        <SearchBar onSearchSubmit={handleSearchSubmit} />
+        </div>
+        <div className={isSearchPerformed ? 'search' : 'hidden'}>
+
+        {isSearchPerformed && <FilterResult searchQuery={searchQuery} />}
+        </div>
       </div>
-      <img src={Logo} className="logo"/>
+      <img src={Logo} className="logo" />
     </div>
   );
 }
