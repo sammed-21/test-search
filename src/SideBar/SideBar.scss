@@ -2,13 +2,13 @@
 
 .container-sidebar{
     display: flex;
-    min-width:200px;
+    width: 100%;
 align-items: start;
     flex-direction:column;
     justify-content: flex-start;
     font-family: $font-family;
     background-color: #fff;
-    .container-main{
+    .container-side{
         display: flex;
         flex-direction:column;
         width:100% ;
@@ -17,11 +17,21 @@ align-items: start;
         
 
     }
-    @media (max-width: 768px) {
-        /* Reduce the width when the screen width is less than or equal to 768px */
-       display: flex;
-       flex-direction:column;
-       justify-content: flex-start;
-       align-items: center;
-      }
+    @media (max-width: 666px) {
+    .container-sidebar{
+        display:flex;
+    flex-direction: column;
+    
+     width:100% ;
+    background-color: aqua;
+    max-height: 15vh;
+    .container-side{
+        width: 100%;
+        display: flex;
+        justify-content: fSlex-start;
+        flex-direction: row;
+         
+    }
+    }
+    }
 }

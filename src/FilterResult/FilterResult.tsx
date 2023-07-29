@@ -25,27 +25,32 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
     generateData(10)
   );
 
-
   // this is search filter
   useEffect(() => {
     // Filter the clothing items based on the searchInput
     const filteredItems = clothingItems.filter((item) =>
-    Object.values(item).some((value) =>
-    typeof value === 'string' && value.toLowerCase().includes(searchInput.toLowerCase())
-  )
+      Object.values(item).some(
+        (value) =>
+          typeof value === "string" &&
+          value.toLowerCase().includes(searchInput.toLowerCase())
+      )
     );
     setClothingItems(filteredItems);
   }, [selectItems]);
-
 
   // price filter function
   const handlePriceFilter = (priceRange: string) => {
     let filteredItems: ClothingItem[] = [];
 
     if (priceRange === "under500") {
-      filteredItems = clothingItems.filter(item => parseFloat(item.price) < 500);
+      filteredItems = clothingItems.filter(
+        (item) => parseFloat(item.price) < 500
+      );
     } else if (priceRange === "500to3000") {
-      filteredItems = clothingItems.filter(item => parseFloat(item.price) >= 500 && parseFloat(item.price) <= 3000);
+      filteredItems = clothingItems.filter(
+        (item) =>
+          parseFloat(item.price) >= 500 && parseFloat(item.price) <= 3000
+      );
     }
 
     setClothingItems(filteredItems);
@@ -53,23 +58,24 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
 
   //Filter through review rating
   const handelRatingfunc = (rating: number) => {
-     let filteredItems: ClothingItem[] = [];
-    filteredItems = clothingItems.filter(item => item.clampedRating >= rating);
+    let filteredItems: ClothingItem[] = [];
+    filteredItems = clothingItems.filter(
+      (item) => item.clampedRating >= rating
+    );
     setClothingItems(filteredItems);
-  }
+  };
 
   //set the searchinput
-  const handleInputSearch = ( e:any ) => {
+  const handleInputSearch = (e: any) => {
     setSearchInput(e.target.value);
-   };
+  };
 
-
-  //radio filter 
+  //radio filter
   const handleChange = (value: string) => {
     setSelectItems(value);
-   };
+  };
 
-//search bar form
+  //search bar form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = generateData(16);
@@ -77,10 +83,9 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
     setSearchInput("");
   };
 
-  
   return (
     <div className="main">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="forms">
         <div className="search">
           <input
             type="search"
@@ -97,7 +102,11 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
       {/* </div> */}
       <div className="container">
         <div className="sidebar">
-        <SideBar handleChange={handleChange} handlePriceFilter={handlePriceFilter} handelRatingfunc={handelRatingfunc} />
+          <SideBar
+            handleChange={handleChange}
+            handlePriceFilter={handlePriceFilter}
+            handelRatingfunc={handelRatingfunc}
+          />
         </div>
         <div className="container-main">
           {/* <h1>{searchQuery}</h1> */}
@@ -110,7 +119,8 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
               largePrice={item.largePrice}
               image={item.image}
               category={item.category}
-              clampedRating={item.clampedRating} />
+              clampedRating={item.clampedRating}
+            />
           ))}
         </div>
       </div>

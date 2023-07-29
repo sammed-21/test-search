@@ -20,7 +20,7 @@ const sideBar: React.FC<SidebarProps> = ({ handleChange,handlePriceFilter,handel
       <div className="header">
         <h1>Search Results</h1>
       </div>
-      <div className="container-main">
+      <div className="container-side">
         <Brand handleChange={handleChange} />
         <Price handlePriceFilter={handlePriceFilter} />
         <Ratings handelRatingfunc={handelRatingfunc} />

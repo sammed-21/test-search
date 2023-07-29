@@ -78,8 +78,53 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      min-height: 40vh;
+      width:100%;
+      
     }
     
+  }
+  @media (max-width: 666px) {
+    /* Reduce the width when the screen width is less than or equal to 768px */
+  .main{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    align-self: flex-start;
+ 
+      form{
+        padding-right: 30px;
+        position: absolute;
+        right: 20px;
+        left: 0;
+        
+        justify-content: flex-start;
+        .search{
+          float: left;
+        top: 0;
+        width: 100%;
+      }
+   
+  }
+  }
+    .container{
+      
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+       .sidebar{
+        min-width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        
+        flex-direction: column;
+       }
+  }
+     
   }
   
 }
