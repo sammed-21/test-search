@@ -4,7 +4,7 @@
   min-height: 100vh;
   display: flex;
   padding: 20px 20px;
-  background-color: whitesmoke;
+  background-color: #fff;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@
     position: relative;
 
     padding-bottom: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     padding: 15px;
     border: 2px solid rgb(169, 166, 166);
 
@@ -125,6 +125,63 @@
        }
   }
      
+  }
+  @media (max-width: 364px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    .search {
+      position: relative;
+  
+      padding-bottom: 10px;
+      background-color: #fff;
+      padding: 15px;
+      border: 2px solid rgb(169, 166, 166);
+  
+    width: 46vw;
+      display: flex;
+       
+      justify-content: space-between;
+      border-radius: 10px;
+      .inputtag {
+        border: none;
+        outline: none;
+        min-width: 40vw;
+      }
+      img {
+        position: absolute;
+        /* Adjust the position of the icon as needed */
+        width: 20px;
+        height: 20px;
+        bottom: 0;
+        right: 10px;
+      }
+    }
+    .container {
+      display: flex;
+      
+      min-width: 100%;
+       
+     
+      .container-main {
+          display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      
+        max-height: 50px; /* Set a max height to trigger the scroll */
+        overflow-y: auto;
+        scrollbar-width: none;
+        
+       max-width: 80%;
+        min-height: 90vh;
+        background-color: #fff;
+      }
+      .container-main::-webkit-scrollbar{
+        display: none;
+      }
+    }
   }
   
 }

@@ -95,7 +95,7 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
             onChange={handleInputSearch}
           />
           <button type="submit">
-            <img src={Search} alt="search image" width="20" height="20" />
+            <img src={Search} alt="search image" width="18" height="18" />
           </button>
         </div>
       </form>
