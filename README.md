@@ -36,6 +36,6 @@ SearchBar
 
 Mobile Responsive
 
-![Alt text](/public/searchBar.png"MobileSearch bar")
+![Alt text](/public/searchBar.png "MobileSearch bar")
 
 
