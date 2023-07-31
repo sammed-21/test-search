@@ -22,7 +22,7 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
   const [selectItems, setSelectItems] = useState<string>("");
   const [searchInput, setSearchInput] = useState<string>("");
   const [clothingItems, setClothingItems] = useState<ClothingItem[]>(
-    generateData(10)
+    generateData(10,searchInput)
   );
 
   // this is search filter
@@ -72,13 +72,19 @@ const FilterResult: React.FC<SearchResultPageProps> = ({ searchQuery }) => {
 
   //radio filter
   const handleChange = (value: string) => {
-    setSelectItems(value);
+    // console.log(typeof(value));
+    
+    // setSelectItems(value);
+    let filteredItems:ClothingItem[] = clothingItems.filter((item) => {
+       return value !=item.name;
+    })
+    setClothingItems(filteredItems);
   };
 
   //search bar form
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = generateData(16);
+    const data = generateData(16,searchInput);
     setClothingItems(data);
     setSearchInput("");
   };
