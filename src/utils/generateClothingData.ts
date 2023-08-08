@@ -20,10 +20,11 @@ export const generateData = (count: number , search?:any) => {
       name: faker.commerce.productName(),
       category: faker.commerce.department(),
       price: faker.commerce.price(),
-      image: faker.image.urlLoremFlickr({ category: `${search}`}),
+      image: faker.image.urlLoremFlickr({ category: 'cloths' ||`${search}`}),
       largePrice: `Rs. ${basePrice + 100}`,
       clampedRating : Math.floor(Math.random() * 6)
-    }));
+  }));
+ 
     return data;
 }
 

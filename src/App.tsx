@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
  
 import './App.scss';
-import Logo from "./assets/logo.png"
+// import Logo from "./assets/logo.png"
 import SearchBar from './SearchBar/SearchBar';
 import FilterResult from './FilterResult/FilterResult';
  
@@ -31,7 +31,8 @@ function App() {
         {isSearchPerformed && <FilterResult searchQuery={searchQuery} />}
         </div>
       </div>
-      <img src={Logo} onClick={()=>homePage()} className="logo" />
+      {/* <img src={Logo} onClick={()=>homePage()} className="logo" /> */}
+      <h2 onClick={()=>homePage()} className="logo">SearchBoard</h2>
     </div>
   );
 }
